@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * 
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function destination_user_tabs_menu_local_tasks_alter(&$data, $router_item, $root_path) {
+
+    $count = 0;
+    $paths = array('user/register','user/login');
+    foreach ($data['tabs'][0]['output'] as $tab) {
+      if (false !== array_search($data['tabs'][0]['output'][$count]['#link']['path'],$paths)) {
+        $dest = drupal_get_destination();
+        $data['tabs'][0]['output'][$count]['#link']['localized_options']['query'] = array('destination' => $dest['destination']);
+      }
+      $count++;
+    }
+
+}
