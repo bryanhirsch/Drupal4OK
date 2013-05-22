@@ -780,6 +780,9 @@ optgroup::-moz-focus-inner {
 #main-menu-container label:hover {
   background: #555555;
 }
+html.lt-ie9 #main-menu-container input {
+  display: none;
+}
 #main-menu-container input[type="checkbox"] {
   visibility: hidden;
   width: 1px;
@@ -801,6 +804,11 @@ optgroup::-moz-focus-inner {
   border-bottom: 1px solid #333333;
   max-height: 0px;
   overflow: hidden;
+}
+html.lt-ie9 #main-menu-container ul.active {
+  max-height: 9999px;
+  padding-bottom: 1.5em;
+  border-top: 1px solid #333333;
 }
 #main-menu-container ul li {
   display: block;

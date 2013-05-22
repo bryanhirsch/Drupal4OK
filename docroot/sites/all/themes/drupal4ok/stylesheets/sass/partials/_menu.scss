@@ -57,6 +57,12 @@ $menu-text: #fff;
     }
   }
 
+  html.lt-ie9 & {
+    input {
+      display: none;
+    }
+  }
+
   input[type="checkbox"] {
     visibility: hidden;
     width: 1px;
@@ -76,6 +82,14 @@ $menu-text: #fff;
     @include menu-reset;
     max-height: 0px;
     overflow: hidden;
+
+    html.lt-ie9 & {
+      &.active {
+        max-height: 9999px;
+        padding-bottom: $base-rhythm-unit;
+        border-top: 1px solid $menu-divider;
+      }
+    }
 
     li {
       @include menu-reset;
