@@ -77,7 +77,7 @@ function housing_have_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Need Housing';
+  $handler->display->display_options['title'] = 'People With Housing Needs';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -107,6 +107,8 @@ function housing_have_views_default_views() {
   $handler->display->display_options['fields']['field_preferences']['table'] = 'field_data_field_preferences';
   $handler->display->display_options['fields']['field_preferences']['field'] = 'field_preferences';
   $handler->display->display_options['fields']['field_preferences']['label'] = '';
+  $handler->display->display_options['fields']['field_preferences']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_preferences']['alter']['text'] = 'Needs housing that [field_preferences] ';
   $handler->display->display_options['fields']['field_preferences']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_preferences']['delta_offset'] = '0';
   /* Sort criterion: Content: Post date */
@@ -134,7 +136,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['filters']['field_preferences_value']['field'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator_id'] = 'field_preferences_value_op';
-  $handler->display->display_options['filters']['field_preferences_value']['expose']['label'] = 'I need a house that:';
+  $handler->display->display_options['filters']['field_preferences_value']['expose']['label'] = 'My housing:';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator'] = 'field_preferences_value_op';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['identifier'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['multiple'] = TRUE;
