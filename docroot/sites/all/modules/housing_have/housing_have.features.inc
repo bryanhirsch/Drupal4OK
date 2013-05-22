@@ -31,14 +31,13 @@ function housing_have_views_api() {
 function housing_have_node_info() {
   $items = array(
     'housing_have' => array(
-      'name' => t('Open Bed'),
+      'name' => t('Give a Bed'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
       'title_label' => t('Summary'),
       'help' => t('<p><strong>Privacy Statement</strong><br />
-
-The information collected on this form is used by qldfloods.org to allow us to match someone who has a bed available with someone who requires a bed. The information collected on this form is displayed on the website and is provided to callers to the qldfloods.org call centre. You can update or remove this information at any time by returning to this website. Your information will not be used for any other purpose other than that noted above.</p>'),
+The information collected on this form is used by help4ok.net to allow us to match someone who has housing available with someone who requires housing. The information collected on this form is displayed on the website. You can update or remove this information at any time by returning to this website. Your information will not be used for any other purpose other than that noted above.</p>'),
     ),
     'housing_need' => array(
       'name' => t('Need a Bed'),

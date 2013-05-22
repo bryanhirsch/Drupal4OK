@@ -70,14 +70,14 @@ function housing_have_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_housing_have';
-  $strongarm->value = '2';
+  $strongarm->value = '0';
   $export['comment_housing_have'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_housing_need';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['comment_housing_need'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -117,7 +117,7 @@ function housing_have_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '0',
         ),
       ),
       'display' => array(),
@@ -146,18 +146,14 @@ function housing_have_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_housing_have';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_housing_have'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_housing_need';
-  $strongarm->value = array(
-    0 => 'main-menu',
-  );
+  $strongarm->value = array();
   $export['menu_options_housing_need'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -180,7 +176,6 @@ function housing_have_strongarm() {
   $strongarm->name = 'node_options_housing_have';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_housing_have'] = $strongarm;
 
@@ -190,7 +185,6 @@ function housing_have_strongarm() {
   $strongarm->name = 'node_options_housing_need';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'promote',
   );
   $export['node_options_housing_need'] = $strongarm;
 
@@ -212,14 +206,14 @@ function housing_have_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_housing_have';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_housing_have'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_housing_need';
-  $strongarm->value = 1;
+  $strongarm->value = 0;
   $export['node_submitted_housing_need'] = $strongarm;
 
   return $export;

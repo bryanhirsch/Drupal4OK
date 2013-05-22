@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Installs and enables the date popup and date views modules.
+ */
+function housing_have_update_7000(&$sandbox) {
+  module_enable(array('date_popup','date_views'));
+}

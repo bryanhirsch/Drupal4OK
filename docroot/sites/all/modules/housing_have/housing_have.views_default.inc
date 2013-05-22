@@ -94,7 +94,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Preferences */
+  /* Field: Content: I need a house that: */
   $handler->display->display_options['fields']['field_preferences']['id'] = 'field_preferences';
   $handler->display->display_options['fields']['field_preferences']['table'] = 'field_data_field_preferences';
   $handler->display->display_options['fields']['field_preferences']['field'] = 'field_preferences';
@@ -120,7 +120,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'housing_need' => 'housing_need',
   );
-  /* Filter criterion: Content: Preferences (field_preferences) */
+  /* Filter criterion: Content: I need a house that: (field_preferences) */
   $handler->display->display_options['filters']['field_preferences_value']['id'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['table'] = 'field_data_field_preferences';
   $handler->display->display_options['filters']['field_preferences_value']['field'] = 'field_preferences_value';
@@ -139,7 +139,7 @@ function housing_have_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'need-bed';
+  $handler->display->display_options['path'] = 'housing/need';
   $export['need_bed'] = $view;
 
   return $export;

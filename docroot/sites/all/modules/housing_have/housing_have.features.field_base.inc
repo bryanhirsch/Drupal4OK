@@ -84,11 +84,13 @@ function housing_have_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Cats' => 'Cats',
-        'Dogs (Small)' => 'Dogs (Small)',
-        'Dogs (Large)' => 'Dogs (Large)',
-        'Internet' => 'Internet',
-        'Children' => 'Children',
+        'Have Cat(s)' => 'Have Cat(s)',
+        'Allow Cat(s)' => 'Allow Cat(s)',
+        'Have Small Dog(s)' => 'Have Small Dog(s)',
+        'Allow Small Dog(s) (small)' => 'Allow Small Dog(s)',
+        'Have Large Dog(s)' => 'Have Large Dog(s)',
+        'Allow Large Dog(s)' => 'Allow Large Dog(s)',
+        'Have Internet' => 'Have Internet',
         'Handicap Accessible' => 'Handicap Accessible',
       ),
       'allowed_values_function' => '',
@@ -129,7 +131,7 @@ function housing_have_field_default_field_bases() {
   // Exported field_base: 'field_image'
   $field_bases['field_image'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_image',
@@ -197,9 +199,13 @@ function housing_have_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'cats' => 'Cats',
-        'dogs' => 'Dogs',
-        'children' => 'Children',
+        'Allows Cat(s)' => 'Allows Cat(s)',
+        'Allows Small Dog(s)' => 'Allows Small Dog(s)',
+        'Allows Large Dog(s)' => 'Allows Large Dog(s)',
+        'Has Internet' => 'Has Internet',
+        'Is Handicap Accessible' => 'Is Handicap Accessible',
+        'Does not have Cats' => 'Does not have Cats',
+        'Does not have Dogs' => 'Does not have Dogs',
       ),
       'allowed_values_function' => '',
     ),
