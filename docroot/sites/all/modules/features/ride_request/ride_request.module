@@ -5,3 +5,170 @@
  */
 
 include_once 'ride_request.features.inc';
+
+
+/* Implements hook_confirm_status() */
+function ride_request_confirm_status() {
+
+  // which users need to be contacted?  return an array of user nodes/entities
+  // from this point on, wrapped users will be used, so this function
+  // needs to return an array of wrapped users
+  $wrapped_ride_requests = _ride_request_contact_list();
+
+  // populate an array of contacts to be messaged
+  $contacts = array();
+  foreach($wrapped_ride_requests as $wrapped_ride_request) {
+
+    // Extract only the relevant information from the nodes/entities
+    $contact = _ride_request_format_contact($wrapped_ride_request);
+
+    $contacts[] = $contact;
+
+  }
+
+  return $contacts;
+}
+
+/**
+ * This function is a callback that allows external code to update the ride request status
+ * @param int $nid The node ID of the ride request
+ * @param string $reply The interpreted response from VIOP communication
+ */
+function ride_request_contact_update($nid, $reply) {
+  $ride_request = node_load($nid);
+  $wrapped_ride_request = entity_metadata_wrapper('node', $ride_request);
+  switch($reply) {
+    case 'confirmed':
+      // what happens if the user confirms the message?
+      // if they still need a ride, set the status to reflect that
+      $wrapped_ride_request->field_ride_status->set('need');
+      break;
+    case 'not confirmed':
+      // what happens if the user says no to the message?
+      // if they no longer need a ride, set the status to successful
+      $wrapped_ride_request->field_ride_status->set('successful');
+      break;
+    case 'invalid':
+      // what happens if the user does not respond?
+      // if the user does not respond, take no action - leave the status as is
+      break;
+  }
+  $wrapped_ride_request->save();
+}
+
+/**
+ * Callback function that lists all ride requests that have not been successfully completed.
+ * @return array
+ */
+function _ride_request_contact_list() {
+  $ride_requests = entity_load('node'); // load all of the entities
+  $wrapped_ride_requests = array(); // the users to be returned
+  foreach($ride_requests as $ride_request) {
+    // determine if the user needs to be contacted based on these fields
+    $wrapped_ride_request = entity_metadata_wrapper('node', $ride_request, array('bundle' => 'ride_request'));
+    $status = $wrapped_ride_request->field_ride_status->value();
+    $pref = $wrapped_ride_request->field_person_contact_pref->value();
+    $contact_status = array(
+      'need',
+      'pending'
+    );
+    $contact_pref = array(
+      'text',
+      'voice'
+    );
+    // if the user has the correct status and pref, the user needs to be contacted
+    if (in_array($status, $contact_status) && in_array($pref, $contact_pref)) {
+      $wrapped_ride_requests[] = $wrapped_ride_request;
+    }
+  }
+
+  return $wrapped_ride_requests;
+}
+
+/**
+ * Callback function to format contact information for a ride request.
+ * @param $wrapped_ride_request
+ * @return array
+ */
+function _ride_request_format_contact($wrapped_ride_request) {
+  // extract only the necessary information for an individual
+  return array(
+    "nid" => $wrapped_ride_request->nid->value(),
+    'phone_num' => $wrapped_ride_request->field_person_phone_number->value(),
+    'language' => $wrapped_ride_request->field_person_language->value(),
+    // Generate the necessary message based on some logic
+    // for rides, the relevant data will be status and contact_preference
+    // language needs to be taken into account in all situations
+    'message' => _ride_request_generate_message($wrapped_ride_request),
+    'contact_preference' => $wrapped_ride_request->field_person_contact_pref->value(),
+    'yes' => array(
+      'text' => 'yes',
+      'voice' => 1
+    ),
+    'no' => array(
+      'text' => 'no',
+      'voice' => 2
+    ),
+    'callback' => 'ride_request_contact_update' // the name of the function as a string
+  );
+}
+
+/**
+ * Callback function to generate a message
+ * @param $wrapped_ride_request
+ * @return null|string
+ */
+function _ride_request_generate_message($wrapped_ride_request) {
+  // determine what message a user needs to receive
+  switch($wrapped_ride_request->field_person_language->value()) {
+    case 'english':
+      $message = t('Do you still need a ride?');
+      break;
+    //@todo: investigate returning spanish version of string for other languages
+    case 'spanish':
+      $message = t('TODO');
+      break;
+  }
+
+  // language must be taken into account
+  return $message;
+}
+
+function ride_request_menu() {
+  $items = array();
+  $items['ride/need'] = array(
+    'access callback' => true,
+    'title' => t('I Need a Ride'),
+    'page callback' => 'ride_request_need_ride_page',
+  );
+  return $items;
+}
+
+function ride_request_need_ride_page() {
+  if (user_is_logged_in()) {
+    drupal_goto('node/add/ride-request');
+  }
+  
+  $output = '<div>' .  t("If you're looking for a ride, you're in the right place.  Login or register to get started.") . "</div>";
+  //$output = theme_item_list($variables);
+  $items[] = l('Log In', 'user/login', 
+      array(
+        'attributes' => array('class' => 'need'),
+        'query' => array('destination' => 'node/add/ride-request'),
+        )
+      );
+  
+  $items[] = l('Register', 'user/register', 
+    array(
+      'attributes' => array('class' => 'need'),
+      'query' => array('destination' => 'node/add/ride-request'),
+      )
+    );
+    
+    
+  $output .= '<nav class="menu">' 
+    . theme('item_list', (array('items' => $items, 'type' => 'ul', 'title' => '', 'attributes' => array())))
+    . '</nav>';
+  
+  return $output;
+}
