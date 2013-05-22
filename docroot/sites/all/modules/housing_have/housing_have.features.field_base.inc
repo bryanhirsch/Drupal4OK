@@ -84,14 +84,15 @@ function housing_have_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
+        'Allow Children' => 'Allow Children',
+        'Is Handicap Accessible' => 'Is Handicap Accessible',
+        'Have Internet' => 'Have Internet',
         'Have Cat(s)' => 'Have Cat(s)',
         'Allow Cat(s)' => 'Allow Cat(s)',
         'Have Small Dog(s)' => 'Have Small Dog(s)',
         'Allow Small Dog(s) (small)' => 'Allow Small Dog(s)',
         'Have Large Dog(s)' => 'Have Large Dog(s)',
         'Allow Large Dog(s)' => 'Allow Large Dog(s)',
-        'Have Internet' => 'Have Internet',
-        'Handicap Accessible' => 'Handicap Accessible',
       ),
       'allowed_values_function' => '',
     ),
@@ -126,6 +127,22 @@ function housing_have_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_boolean',
+  );
+
+  // Exported field_base: 'field_housing_location'
+  $field_bases['field_housing_location'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_housing_location',
+    'foreign keys' => array(),
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'addressfield',
   );
 
   // Exported field_base: 'field_image'

@@ -244,6 +244,69 @@ function housing_have_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-housing_have-field_housing_location'
+  $field_instances['node-housing_have-field_housing_location'] = array(
+    'bundle' => 'housing_have',
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|housing_have|field_housing_location|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'administrative_area' => 'OK',
+        'postal_code' => '',
+        'country' => 'US',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Please enter the location of your housing.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_housing_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(
+          'US' => 'US',
+        ),
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
+          'organisation' => 0,
+          'name-full' => 0,
+          'name-oneline' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 27,
+    ),
+  );
+
   // Exported field_instance: 'node-housing_have-field_image'
   $field_instances['node-housing_have-field_image'] = array(
     'bundle' => 'housing_have',
@@ -954,11 +1017,13 @@ function housing_have_field_default_field_instances() {
   t('I prefer to be contacted by');
   t('If you would like, you can provide a photo of your home to display with your listing.');
   t('Length of stay');
+  t('Location');
   t('Name');
   t('Number of People');
   t('Phone Number');
   t('Photo');
   t('Please enter in the number of people that you can accommodate. For example, 1 double bed (2 spaces) and 1 single bed (1 space) can usually be counted as 3 spaces maximum. ');
+  t('Please enter the location of your housing.');
   t('Please indicate how many people require housing.');
   t('Please indicate when your housing is first available and optionally show an end date when it is no longer available.');
   t('Please indicate your primary language.');
