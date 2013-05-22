@@ -49,7 +49,7 @@ $menu-text: #fff;
     bottom: 0;
     left: 0;
     cursor: pointer;
-    
+
     // text-indent: 9999px;
 
     &:hover {
@@ -131,19 +131,6 @@ $menu-text: #fff;
           display: block;
           font-size: 130%;
           font-weight: normal;
-        }
-      }
-      &.last {
-        width: 98%;
-        clear: both;
-        a.bottom {
-          @include adjust-font-size-to(35px);
-          @include breakpoint($small-screen) {
-            @include adjust-font-size-to(50px);
-          }
-          padding-top: .75em;
-          padding-bottom: .75em;
-          text-align: center;
         }
       }
     }
