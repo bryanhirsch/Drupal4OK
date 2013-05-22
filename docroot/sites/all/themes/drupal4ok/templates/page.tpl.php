@@ -76,6 +76,9 @@
   <div id="page-wrapper"><div id="page">
 
     <nav id="main-menu-container">
+
+      <?php print render($page['pre_menu']); ?>
+
       <label for="main-menu-toggle" onclick="" title="Toggle main menu"> &equiv; </label>
       <input type="checkbox" id="main-menu-toggle" />
       <?php print theme('links__system_main_menu', array('links' => $main_menu, 'attributes' => array('id' => 'main-menu', 'class' => array('links', 'inline', 'clearfix')), 'heading' => t('Main menu'))); ?>

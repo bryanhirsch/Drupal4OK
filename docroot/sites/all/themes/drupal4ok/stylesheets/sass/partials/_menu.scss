@@ -12,6 +12,21 @@ $menu-text: #fff;
   border-bottom: 1px solid $menu-divider;
 }
 
+.region-pre-menu {
+  padding: 0.5em;
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1em;
+  }
+}
+
 #main-menu-container {
   background: $menu-bg;
   z-index: 5;
@@ -20,7 +35,6 @@ $menu-text: #fff;
 
   position: relative;
   width: 100%;
-  padding-bottom: 2em;
 
   label {
     text-align: center;
@@ -81,6 +95,8 @@ $menu-text: #fff;
 
   input[type="checkbox"]:checked ~ ul {
     max-height: 9999px;
+    padding-bottom: 2em;
+    border-top: 1px solid $menu-divider;
   }
 }
 
