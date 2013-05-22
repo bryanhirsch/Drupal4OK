@@ -36,6 +36,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['header']['area']['id'] = 'area';
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['empty'] = TRUE;
   $handler->display->display_options['header']['area']['content'] = '<h3>You are currently in the Have Housing section.</h3>
 If you need housing, you are in the right place.';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
@@ -43,6 +44,7 @@ If you need housing, you are in the right place.';
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
   $handler->display->display_options['footer']['area']['content'] = 'Can\'t find the right match? Click here to <a href="/node/add/housing-need" class="request-house">Request Housing</a>';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
@@ -142,6 +144,7 @@ If you are looking to offer others a place to stay, you are at the right place.'
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['empty'] = TRUE;
   $handler->display->display_options['footer']['area']['content'] = 'Can\'t find the right match? Click here to <a href="/node/add/housing-have" class="list-house">List Your House</a>.';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
