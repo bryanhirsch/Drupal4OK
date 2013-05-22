@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the My Riders feature.
+ */
+
+include_once 'my_riders.features.inc';
