@@ -133,3 +133,42 @@ function _ride_request_generate_message($wrapped_ride_request) {
   // language must be taken into account
   return $message;
 }
+
+function ride_request_menu() {
+  $items = array();
+  $items['ride/need'] = array(
+    'access callback' => true,
+    'title' => t('I Need a Ride'),
+    'page callback' => 'ride_request_need_ride_page',
+  );
+  return $items;
+}
+
+function ride_request_need_ride_page() {
+  if (user_is_logged_in()) {
+    drupal_goto('node/add/ride-request');
+  }
+  
+  $output = '<div>' .  t("If you're looking for a ride, you're in the right place.  Login or register to get started.") . "</div>";
+  //$output = theme_item_list($variables);
+  $items[] = l('Log In', 'user/login', 
+      array(
+        'attributes' => array('class' => 'need'),
+        'query' => array('destination' => 'node/add/ride-request'),
+        )
+      );
+  
+  $items[] = l('Register', 'user/register', 
+    array(
+      'attributes' => array('class' => 'need'),
+      'query' => array('destination' => 'node/add/ride-request'),
+      )
+    );
+    
+    
+  $output .= '<nav class="menu">' 
+    . theme('item_list', (array('items' => $items, 'type' => 'ul', 'title' => '', 'attributes' => array())))
+    . '</nav>';
+  
+  return $output;
+}
