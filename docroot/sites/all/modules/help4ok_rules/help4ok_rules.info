@@ -1,0 +1,11 @@
+name = help4ok_rules
+description = help4ok_rules
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = help4ok_rules
+dependencies[] = entity
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_add_content_redirect_to_login
+project path = sites/all/modules
