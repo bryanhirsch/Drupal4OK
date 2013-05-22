@@ -210,6 +210,14 @@
  *   );
  * @endcode
  */
+$databases['default']['default'] = array(
+  'driver' => 'mysql',
+  'database' => 'd4ok',
+  'username' => 'root',
+  'password' => 'taz4mnbe',
+  'host' => 'localhost',
+);
+
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/drupal4ok/housing_branch-settings.inc');
   $conf['cache_backends'][] = './sites/all/modules/contrib/memcache/memcache.inc';
