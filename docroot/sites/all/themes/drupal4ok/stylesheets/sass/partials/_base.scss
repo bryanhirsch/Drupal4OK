@@ -11,11 +11,17 @@ $grey: #403d38;
 $light-grey:#5a5a5a;
 $white: white;
 
+//Breakpoints for fonts...
+$small-screen: 500px;
+
+@import "breakpoint";
+
 @import "fonts";
 @import "formalize";
 @import "forms";
 @import "menu";
 @import "footer";
+@import "breakpoint";
 
 
 

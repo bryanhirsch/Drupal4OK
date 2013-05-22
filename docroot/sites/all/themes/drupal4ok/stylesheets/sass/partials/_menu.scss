@@ -85,6 +85,10 @@ $menu-text: #fff;
 }
 
 #front-menu {
+  h2 {
+    display: none;
+  }
+
   ul {
     width: 100%;
     li {
@@ -100,7 +104,10 @@ $menu-text: #fff;
         padding: .25em;
         color: $white;
         text-decoration: none;
-        @include adjust-font-size-to(50px);
+        @include adjust-font-size-to(40px);
+        @include breakpoint($small-screen) {
+          @include adjust-font-size-to(55px);
+        }
         &.give {
           background-color: $light-blue;
         }

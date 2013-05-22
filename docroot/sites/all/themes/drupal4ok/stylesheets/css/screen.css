@@ -811,6 +811,9 @@ optgroup::-moz-focus-inner {
   max-height: 9999px;
 }
 
+#front-menu h2 {
+  display: none;
+}
 #front-menu ul {
   width: 100%;
 }
@@ -828,8 +831,14 @@ optgroup::-moz-focus-inner {
   padding: .25em;
   color: white;
   text-decoration: none;
-  font-size: 3.57143em;
-  line-height: 1.32em;
+  font-size: 2.85714em;
+  line-height: 1.1em;
+}
+@media (min-width: 500px) {
+  #front-menu ul li a {
+    font-size: 3.92857em;
+    line-height: 1.2em;
+  }
 }
 #front-menu ul li a.give {
   background-color: #4c6299;
