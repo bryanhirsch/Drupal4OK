@@ -14,9 +14,17 @@ body, html {
   font-family: $font-family;
 }
 
+body {
+  background: #dedede;
+}
+
 h1, h2, h3, h4, h5 {
   font-weight: bold;
 
+}
+
+table {
+  width: 100%;
 }
 
 td {
@@ -27,4 +35,5 @@ td {
 #page-wrapper {
   max-width: $page-max-width;
   margin: auto;
+  background: #fff;
 }
