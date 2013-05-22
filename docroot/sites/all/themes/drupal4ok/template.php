@@ -75,3 +75,26 @@ function drupal4ok_links__system_main_menu($variables) {
 
   return $output;
 }
+
+/**
+ *
+ *
+ */
+function drupal4ok_theme($existing, $type, $theme, $path)
+{
+    $items = array();
+
+    $items['user_login'] = array(
+        'render element' => 'form',
+        'path' => drupal_get_path('theme', 'drupal4ok') . '/templates',
+        'template' => 'user-login',
+    );
+
+    $items['user_register_form'] = array(
+        'render element' => 'form',
+        'path' => drupal_get_path('theme', 'drupal4ok') . '/templates',
+        'template' => 'user-register',
+    );
+
+    return $items;
+}
