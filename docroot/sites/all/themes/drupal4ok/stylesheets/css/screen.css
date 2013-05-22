@@ -831,13 +831,13 @@ optgroup::-moz-focus-inner {
   padding: .25em;
   color: white;
   text-decoration: none;
-  font-size: 2.85714em;
-  line-height: 1.1em;
+  font-size: 2.5em;
+  line-height: 1.25714em;
 }
-@media (min-width: 500px) {
+@media (min-width: 460px) {
   #front-menu ul li a {
-    font-size: 3.92857em;
-    line-height: 1.2em;
+    font-size: 3.57143em;
+    line-height: 1.32em;
   }
 }
 #front-menu ul li a.give {
@@ -848,11 +848,29 @@ optgroup::-moz-focus-inner {
   font-size: 130%;
   font-weight: normal;
 }
+#front-menu ul li.last {
+  width: 98%;
+  clear: both;
+}
+#front-menu ul li.last a.bottom {
+  font-size: 2.5em;
+  line-height: 1.25714em;
+  padding-top: .75em;
+  padding-bottom: .75em;
+  text-align: center;
+}
+@media (min-width: 460px) {
+  #front-menu ul li.last a.bottom {
+    font-size: 3.57143em;
+    line-height: 1.32em;
+  }
+}
 
 #footer {
   background-color: #282624;
   color: white;
   text-align: center;
+  margin-top: 0.25em;
 }
 #footer ul li {
   text-transform: lowercase;

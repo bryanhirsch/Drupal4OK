@@ -12,7 +12,7 @@ $light-grey:#5a5a5a;
 $white: white;
 
 //Breakpoints for fonts...
-$small-screen: 500px;
+$small-screen: 460px;
 
 @import "breakpoint";
 
@@ -21,7 +21,6 @@ $small-screen: 500px;
 @import "forms";
 @import "menu";
 @import "footer";
-@import "breakpoint";
 
 
 

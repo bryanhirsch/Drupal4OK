@@ -104,9 +104,9 @@ $menu-text: #fff;
         padding: .25em;
         color: $white;
         text-decoration: none;
-        @include adjust-font-size-to(40px);
+        @include adjust-font-size-to(35px);
         @include breakpoint($small-screen) {
-          @include adjust-font-size-to(55px);
+          @include adjust-font-size-to(50px);
         }
         &.give {
           background-color: $light-blue;
@@ -115,6 +115,19 @@ $menu-text: #fff;
           display: block;
           font-size: 130%;
           font-weight: normal;
+        }
+      }
+      &.last {
+        width: 98%;
+        clear: both;
+        a.bottom {
+          @include adjust-font-size-to(35px);
+          @include breakpoint($small-screen) {
+            @include adjust-font-size-to(50px);
+          }
+          padding-top: .75em;
+          padding-bottom: .75em;
+          text-align: center;
         }
       }
     }
