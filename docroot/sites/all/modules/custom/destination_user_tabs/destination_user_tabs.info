@@ -1,0 +1,8 @@
+name = Destination User tabs
+description = 
+package = 
+core = 7.x
+version = 7.x-1.x
+
+;files[] =
+;dependencies[] = 

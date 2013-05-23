@@ -1,0 +1,49 @@
+name = Help4OK
+description = Glue module for help4ok.org site.
+core = 7.x
+
+; contrib 
+; --------
+dependencies[] = addressfield
+dependencies[] = addtoany
+dependencies[] = admin_menu
+dependencies[] = advanced_help
+dependencies[] = auto_nodetitle
+dependencies[] = browscap
+dependencies[] = ctools
+dependencies[] = date
+dependencies[] = devel
+dependencies[] = email
+dependencies[] = entity
+dependencies[] = entityreference
+dependencies[] = features
+dependencies[] = field_group
+dependencies[] = field_permissions
+dependencies[] = flag
+dependencies[] = geocoder
+dependencies[] = geofield
+dependencies[] = geophp
+dependencies[] = globalredirect
+dependencies[] = googleanalytics
+dependencies[] = housing_have
+dependencies[] = jquery_update
+dependencies[] = leaflet
+dependencies[] = libraries
+dependencies[] = link
+dependencies[] = menu_attributes
+dependencies[] = mollom
+dependencies[] = pathauto
+dependencies[] = person
+dependencies[] = privatemsg
+dependencies[] = ride_request
+dependencies[] = rider_locations
+dependencies[] = strongarm
+dependencies[] = token
+dependencies[] = views
+dependencies[] = webform
+dependencies[] = wysiwyg
+
+; feature
+; -------
+dependencies[] = person
+dependencies[] = ride_request

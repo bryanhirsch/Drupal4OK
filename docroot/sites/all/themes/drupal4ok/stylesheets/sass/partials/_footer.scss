@@ -1,0 +1,39 @@
+#footer {
+  padding: $base-leader;
+  background-color: $dark-grey;
+  color: $white;
+  text-align: center;
+  margin-top: 0.25em;
+
+  ul {
+    li {
+      text-transform: lowercase;
+      padding: 0;
+      margin: 0;
+      &:after {
+        content: " |";
+      }
+      &.first {
+        display: block;
+        text-transform: uppercase;
+      }
+      &.first, &.last{
+        &:after {
+          content: "";
+        }
+      }
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#copyright {
+  text-align: center;
+}

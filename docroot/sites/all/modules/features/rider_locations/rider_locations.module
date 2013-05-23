@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the rider_locations feature.
+ */
+
+include_once 'rider_locations.features.inc';

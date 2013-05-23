@@ -1,0 +1,152 @@
+$menu-bg: #111;
+$menu-divider: #333;
+$menu-hover: #555;
+$menu-text: #fff;
+
+@mixin menu-reset {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid $menu-divider;
+}
+
+.region-pre-menu {
+  padding: $base-half-leader $base-leader $base-half-leader;
+  text-align: right;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: $base-leader;
+  }
+}
+
+#main-menu-container {
+  background: $menu-bg;
+  z-index: 5;
+
+  @include menu-reset;
+
+  position: relative;
+  width: 100%;
+
+  label {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 1em;
+    line-height: 1em;
+    font-size: $base-rhythm-unit;
+    background: $menu-divider;
+    color: #ccc;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+
+    // text-indent: 9999px;
+
+    &:hover {
+      background: $menu-hover;
+    }
+  }
+
+  html.lt-ie9 & {
+    input {
+      display: none;
+    }
+  }
+
+  input[type="checkbox"] {
+    visibility: hidden;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: 0;
+  }
+
+  h2 {
+    display: none;
+    padding: 0;
+    margin: 0;
+    // @TODO: element-invisible
+  }
+
+  ul {
+    @include menu-reset;
+    max-height: 0px;
+    overflow: hidden;
+
+    html.lt-ie9 & {
+      &.active {
+        max-height: 9999px;
+        padding-bottom: $base-rhythm-unit;
+        border-top: 1px solid $menu-divider;
+      }
+    }
+
+    li {
+      @include menu-reset;
+
+      a {
+        display: block;
+        color: $menu-text;
+        padding: $base-leader;
+        text-decoration: none;
+
+        &:hover {
+          background: $menu-hover;
+        }
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    max-height: 9999px;
+    padding-bottom: $base-rhythm-unit;
+    border-top: 1px solid $menu-divider;
+  }
+}
+
+#front-menu {
+  h2 {
+    display: none;
+  }
+
+  ul {
+    width: 100%;
+    li {
+      width: 48%;
+      padding: 1%;
+      float: left;
+      display: table;
+      a {
+        display: table-cell;
+        width: 100%;
+        background-color: $dark-blue;
+        vertical-align: middle;
+        padding: .25em;
+        color: $white;
+        text-decoration: none;
+        @include adjust-font-size-to(35px);
+        @include breakpoint($small-screen) {
+          @include adjust-font-size-to(50px);
+        }
+        &.give {
+          background-color: $light-blue;
+        }
+        strong {
+          display: block;
+          font-size: 130%;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

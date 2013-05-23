@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Installs and enables the date popup and date views modules.
+ */
+function housing_have_update_7000(&$sandbox) {
+  module_enable(array('date_popup','date_views'));
+}
+
+/**
+ * Installs and enables the rules and rules_admin modules
+ */
+function housing_have_update_7001(&$sandbox) {
+  module_enable(array('rules','rules_admin'));
+}
+
+/**
+ * Installs and enables the flag
+ */
+function housing_have_update_7002(&$sandbox) {
+  module_enable(array('flag'));
+}

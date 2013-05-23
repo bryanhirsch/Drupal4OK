@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the housing_have feature.
+ */
+
+include_once 'housing_have.features.inc';

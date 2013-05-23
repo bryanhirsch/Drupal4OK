@@ -1,0 +1,48 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "normalize";
+
+@import "partials/base";
+@import "partials/_formalize";
+
+// Base Tags
+body, html {
+  font-family: $font-family;
+}
+
+body {
+  background: #dedede;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: $base-half-leader;
+}
+
+// Drupal IDs
+#page-wrapper {
+  max-width: $page-max-width;
+  margin: auto;
+  background: #fff;
+}
+
+#site-name {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#page-title {
+  line-height: 1.1em;
+}

@@ -1,0 +1,28 @@
+@import "compass";
+
+$page-max-width: 40em;
+
+//Colors
+$dark-blue: #303762;
+$light-blue: #4c6299;
+$red: #8c0303;
+$dark-grey: #282624;
+$grey: #403d38;
+$light-grey:#5a5a5a;
+$white: white;
+
+//Breakpoints for fonts...
+$small-screen: 460px;
+
+@import "breakpoint";
+
+@import "fonts";
+@import "formalize";
+@import "forms";
+@import "menu";
+@import "header";
+@import "content";
+@import "footer";
+
+
+
