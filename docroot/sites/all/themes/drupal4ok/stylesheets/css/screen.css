@@ -1332,3 +1332,7 @@ td {
 #page-title {
   line-height: 1.1em;
 }
+
+#name-and-slogan {
+  display: none;
+}
