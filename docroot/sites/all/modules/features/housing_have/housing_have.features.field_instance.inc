@@ -734,6 +734,65 @@ function housing_have_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-housing_need-field_housing_location'
+  $field_instances['node-housing_need-field_housing_location'] = array(
+    'bundle' => 'housing_need',
+    'default_value' => array(
+      0 => array(
+        'element_key' => 'node|housing_need|field_housing_location|und|0',
+        'thoroughfare' => '',
+        'premise' => '',
+        'locality' => '',
+        'country' => 'AF',
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_housing_location',
+    'label' => 'Location',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(),
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 0,
+          'organisation' => 0,
+          'name-full' => 0,
+          'name-oneline' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-housing_need-field_person_contact_pref'
   $field_instances['node-housing_need-field_person_contact_pref'] = array(
     'bundle' => 'housing_need',
