@@ -28,7 +28,7 @@ function dr_rules_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "drupal_message" : { "message" : "Please create an account or login." } },
+        { "drupal_message" : { "message" : "In order to post on the site, please create an account or login." } },
         { "redirect" : { "url" : "user\\/login", "destination" : 1 } }
       ]
     }
