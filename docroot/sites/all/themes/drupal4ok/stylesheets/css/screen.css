@@ -363,12 +363,8 @@ table {
   border-spacing: 0;
 }
 
-* html {
-  font-size: 87.5%;
-}
-
 html {
-  font-size: 14px;
+  font-size: 87.5%;
   line-height: 1.57143em;
 }
 
@@ -453,18 +449,19 @@ input[type="button"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
+  background: #dddddd url('../../images/button.png?1369235624') repeat-x;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#ffffff, #dddddd);
   background-image: -moz-linear-gradient(#ffffff, #dddddd);
   background-image: -o-linear-gradient(#ffffff, #dddddd);
+  background-image: -ms-linear-gradient(#ffffff, #dddddd);
   background-image: linear-gradient(#ffffff, #dddddd);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
   color: #333333;
   display: inline-block;
-  font: bold 12px / 1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
   outline: 0;
   overflow: visible;
   margin: 0;
@@ -485,6 +482,7 @@ input[type="button"]:hover {
   background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   text-decoration: none;
 }
@@ -497,6 +495,7 @@ input[type="button"]:active {
   background-image: -webkit-linear-gradient(#dddddd, #eeeeee);
   background-image: -moz-linear-gradient(#dddddd, #eeeeee);
   background-image: -o-linear-gradient(#dddddd, #eeeeee);
+  background-image: -ms-linear-gradient(#dddddd, #eeeeee);
   background-image: linear-gradient(#dddddd, #eeeeee);
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
   -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
@@ -650,7 +649,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -687,12 +686,12 @@ optgroup::-moz-focus-inner {
 .ie6_button,
 * html button,
 * html a.button {
-  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
+  background: #dddddd url('../../images/button.png?1369235624') repeat-x;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
   color: #333333;
-  font: bold 12px / 1.2 Arial, sans-serif;
+  font: bold 12px/1.2 Arial, sans-serif;
   padding: 2px 10px 0;
   text-decoration: none;
   overflow: visible;
@@ -995,18 +994,19 @@ input[type="button"] {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
+  background: #dddddd url('../../images/button.png?1369235624') repeat-x;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #dddddd));
   background-image: -webkit-linear-gradient(#ffffff, #dddddd);
   background-image: -moz-linear-gradient(#ffffff, #dddddd);
   background-image: -o-linear-gradient(#ffffff, #dddddd);
+  background-image: -ms-linear-gradient(#ffffff, #dddddd);
   background-image: linear-gradient(#ffffff, #dddddd);
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
   color: #333333;
   display: inline-block;
-  font: bold 12px / 1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
   outline: 0;
   overflow: visible;
   margin: 0;
@@ -1027,6 +1027,7 @@ input[type="button"]:hover {
   background-image: -webkit-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: -moz-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: -o-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  background-image: -ms-linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
   text-decoration: none;
 }
@@ -1039,6 +1040,7 @@ input[type="button"]:active {
   background-image: -webkit-linear-gradient(#dddddd, #eeeeee);
   background-image: -moz-linear-gradient(#dddddd, #eeeeee);
   background-image: -o-linear-gradient(#dddddd, #eeeeee);
+  background-image: -ms-linear-gradient(#dddddd, #eeeeee);
   background-image: linear-gradient(#dddddd, #eeeeee);
   -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
   -moz-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
@@ -1192,7 +1194,7 @@ select[size="1"] {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
     border: 0;
     color: white;
-    font: 13px / 17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
     text-shadow: black 0 0 1px;
@@ -1229,12 +1231,12 @@ optgroup::-moz-focus-inner {
 .ie6_button,
 * html button,
 * html a.button {
-  background: #dddddd url('../../images/button.png?1369207369') repeat-x;
+  background: #dddddd url('../../images/button.png?1369235624') repeat-x;
   border: 1px solid;
   border-color: #dddddd #bbbbbb #999999;
   cursor: pointer;
   color: #333333;
-  font: bold 12px / 1.2 Arial, sans-serif;
+  font: bold 12px/1.2 Arial, sans-serif;
   padding: 2px 10px 0;
   text-decoration: none;
   overflow: visible;
@@ -1304,4 +1306,13 @@ td {
   max-width: 40em;
   margin: auto;
   background: #fff;
+}
+
+#site-name {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#page-title {
+  line-height: 1.1em;
 }

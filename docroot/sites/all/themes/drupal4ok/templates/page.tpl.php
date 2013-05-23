@@ -106,7 +106,7 @@
             <?php endif; ?>
           <?php endif; ?>
 
-          <?php if ($site_slogan): ?>
+          <?php if ($site_slogan && $is_front): ?>
             <div id="site-slogan"><?php print $site_slogan; ?></div>
           <?php endif; ?>
         </div> <!-- /#name-and-slogan -->
@@ -115,10 +115,6 @@
       <?php print render($page['header']); ?>
 
     </div></div> <!-- /.section, /#header -->
-
-    <?php if ($breadcrumb): ?>
-      <div id="breadcrumb"><?php print $breadcrumb; ?></div>
-    <?php endif; ?>
 
     <?php print $messages; ?>
 
