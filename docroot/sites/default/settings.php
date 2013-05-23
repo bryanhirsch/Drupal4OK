@@ -212,10 +212,11 @@
  */
 $databases['default']['default'] = array(
   'driver' => 'mysql',
-  'database' => 'd4ok',
-  'username' => 'root',
-  'password' => 'taz4mnbe',
+  'database' => 'drupal4ok',
+  'username' => 'drupal4ok',
+  'password' => 'drupal4ok',
   'host' => 'localhost',
+  'prefix' => '',
 );
 
 if (file_exists('/var/www/site-php')) {

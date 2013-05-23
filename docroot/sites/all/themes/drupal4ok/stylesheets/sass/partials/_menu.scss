@@ -25,6 +25,17 @@ $menu-text: #fff;
     text-decoration: none;
     margin-left: $base-leader;
   }
+
+  #block-system-user-menu ul{
+    @include horizontal-list();
+    a {
+      color: $white;
+      &:active, &:visited, &:hover {
+        color: $white;
+      }
+    }
+  }
+
 }
 
 #main-menu-container {
@@ -39,15 +50,15 @@ $menu-text: #fff;
   label {
     text-align: center;
     display: block;
-    width: 100%;
     height: 1em;
     line-height: 1em;
     font-size: $base-rhythm-unit;
     background: $menu-divider;
     color: #ccc;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
+    right: 0;
+    padding: .25em .75em;
     cursor: pointer;
 
     // text-indent: 9999px;
@@ -78,7 +89,7 @@ $menu-text: #fff;
     // @TODO: element-invisible
   }
 
-  ul {
+  ul#main-menu {
     @include menu-reset;
     max-height: 0px;
     overflow: hidden;
@@ -107,7 +118,7 @@ $menu-text: #fff;
     }
   }
 
-  input[type="checkbox"]:checked ~ ul {
+  input[type="checkbox"]:checked ~ ul#main-menu {
     max-height: 9999px;
     padding-bottom: $base-rhythm-unit;
     border-top: 1px solid $menu-divider;
