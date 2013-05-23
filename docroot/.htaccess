@@ -86,8 +86,29 @@ DirectoryIndex index.php index.html index.htm
   # (http://example.com/... will be redirected to http://www.example.com/...)
   # uncomment the following:
   # RewriteCond %{HTTP_HOST} .
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  Header always set Cache-Control "max-age=1209600" env=longcache
+
+  RewriteCond %{HTTP_HOST} ^drupal4okdev\.prod\.acquia-sites\.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://dev.help4ok.org%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^dev [NC]
+  RewriteCond %{HTTP_HOST} !help4ok\.org$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^drupal4okdev.prod.acquia-sites.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://dev.help4ok.org%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^drupal4okstg\.prod\.acquia-sites\.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://stage.help4ok.org%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^stage [NC]
+  RewriteCond %{HTTP_HOST} !help4ok\.org$ [NC,OR]
+  RewriteCond %{HTTP_HOST} ^drupal4okstg.prod.acquia-sites.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://stage.help4ok.org%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} !^www\.help4ok\.org$ [NC]
+  RewriteCond %{HTTP_HOST} !^(dev|stage) [NC]
+  RewriteRule ^ http%{ENV:protossl}://www.help4ok.org%{REQUEST_URI} [L,R=301,E=longcache:1]
+  Header always set Cache-Control "max-age=1209600" env=longcache
+
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
