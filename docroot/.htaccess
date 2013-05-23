@@ -88,10 +88,16 @@ DirectoryIndex index.php index.html index.htm
   # RewriteCond %{HTTP_HOST} .
   Header always set Cache-Control "max-age=1209600" env=longcache
 
+  RewriteCond %{HTTP_HOST} ^drupal4okdev\.prod\.acquia-sites\.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://dev.help4ok.org%{REQUEST_URI} [L,R=301]
+
   RewriteCond %{HTTP_HOST} ^dev [NC]
   RewriteCond %{HTTP_HOST} !help4ok\.org$ [NC,OR]
   RewriteCond %{HTTP_HOST} ^drupal4okdev.prod.acquia-sites.com$ [NC]
   RewriteRule ^ http%{ENV:protossl}://dev.help4ok.org%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTP_HOST} ^drupal4okstg\.prod\.acquia-sites\.com$ [NC]
+  RewriteRule ^ http%{ENV:protossl}://stage.help4ok.org%{REQUEST_URI} [L,R=301]
 
   RewriteCond %{HTTP_HOST} ^stage [NC]
   RewriteCond %{HTTP_HOST} !help4ok\.org$ [NC,OR]
