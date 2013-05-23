@@ -139,7 +139,7 @@ function rider_locations_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Give this person a ride.';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = 'Give Ride';
   $handler->display->display_options['fields']['nothing']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['nothing']['alter']['path'] = 'user/login?destination=node/[nid]';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
