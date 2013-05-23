@@ -1,3 +1,19 @@
 #content {
   padding: $base-leader;
 }
+#site-name {
+  text-align: center;
+}
+
+#site-name a {
+  text-decoration: none;
+}
+
+#main-menu li {
+  text-align: center;
+}
+
+.views-table td {
+  padding: 10px 0px 10px 10px;
+  font-weight: bold;
+}
