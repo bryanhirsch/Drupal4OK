@@ -316,17 +316,7 @@ function ride_request_field_default_field_instances() {
   // Exported field_instance: 'node-ride_request-field_ride_current_location'
   $field_instances['node-ride_request-field_ride_current_location'] = array(
     'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|ride_request|field_ride_current_location|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -364,8 +354,8 @@ function ride_request_field_default_field_instances() {
           'US' => 'US',
         ),
         'format_handlers' => array(
+          'address' => 'address',
           'address-hide-country' => 'address-hide-country',
-          'address' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
@@ -441,17 +431,7 @@ function ride_request_field_default_field_instances() {
   // Exported field_instance: 'node-ride_request-field_ride_desired_location'
   $field_instances['node-ride_request-field_ride_desired_location'] = array(
     'bundle' => 'ride_request',
-    'default_value' => array(
-      0 => array(
-        'element_key' => 'node|ride_request|field_ride_desired_location|und|0',
-        'thoroughfare' => '',
-        'premise' => '',
-        'locality' => '',
-        'administrative_area' => '',
-        'postal_code' => '',
-        'country' => 'US',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -489,8 +469,8 @@ function ride_request_field_default_field_instances() {
           'US' => 'US',
         ),
         'format_handlers' => array(
-          'address' => 0,
-          'address-hide-country' => 0,
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,

@@ -10,7 +10,6 @@ dependencies[] = email
 dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = flag
-dependencies[] = flag
 dependencies[] = geocoder
 dependencies[] = geofield
 dependencies[] = list
