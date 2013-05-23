@@ -27,7 +27,27 @@ function housing_have_views_default_views() {
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Advanced options',
+    ),
+    'field_house_details_value' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+      ),
+    ),
+  );
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '25';
   $handler->display->display_options['style_plugin'] = 'list';
@@ -103,6 +123,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['filters']['field_house_details_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_house_details_value']['expose']['operator_id'] = 'field_house_details_value_op';
   $handler->display->display_options['filters']['field_house_details_value']['expose']['label'] = 'I need a house that would:';
+  $handler->display->display_options['filters']['field_house_details_value']['expose']['description'] = 'Please select all that apply.';
   $handler->display->display_options['filters']['field_house_details_value']['expose']['operator'] = 'field_house_details_value_op';
   $handler->display->display_options['filters']['field_house_details_value']['expose']['identifier'] = 'field_house_details_value';
   $handler->display->display_options['filters']['field_house_details_value']['expose']['multiple'] = TRUE;
@@ -229,6 +250,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['filters']['field_preferences_value']['exposed'] = TRUE;
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator_id'] = 'field_preferences_value_op';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['label'] = 'My housing:';
+  $handler->display->display_options['filters']['field_preferences_value']['expose']['description'] = 'Please select all that apply.';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['operator'] = 'field_preferences_value_op';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['identifier'] = 'field_preferences_value';
   $handler->display->display_options['filters']['field_preferences_value']['expose']['multiple'] = TRUE;
