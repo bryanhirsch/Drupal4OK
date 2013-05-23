@@ -2,15 +2,12 @@
 
 $(document).ready(function(){
 
-  $('label[for="main-menu-toggle"]').noClickDelay();
-
-  $('#main-menu-toggle').click(function(){
-    if ($(this).attr('checked')) {
-      $(this).removeAttr('checked');
-    }
-    else {
-      $(this).attr('checked', 'checked');
-    }
+  $('#main-menu-toggle').toggle(function(){
+    $('#main-menu-container #main-menu').show();
+    return false;
+  }, function(){
+    $('#main-menu-container #main-menu').hide();
+    return false;
   });
 
 });

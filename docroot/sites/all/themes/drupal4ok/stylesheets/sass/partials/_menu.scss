@@ -52,7 +52,7 @@ $menu-text: #fff;
   position: relative;
   width: 100%;
 
-  label {
+  a#main-menu-toggle {
     text-align: center;
     display: block;
     height: 1em;
@@ -65,8 +65,8 @@ $menu-text: #fff;
     left: 0;
     padding: .25em .75em;
     cursor: pointer;
-
-    // text-indent: 9999px;
+    text-decoration: none;
+    font-weight: normal;
 
     &:hover {
       background: $menu-hover;
@@ -79,15 +79,6 @@ $menu-text: #fff;
     }
   }
 
-  input[type="checkbox"] {
-    visibility: hidden;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: 0;
-    display: none;
-  }
-
   h2 {
     display: none;
     padding: 0;
@@ -97,7 +88,7 @@ $menu-text: #fff;
 
   ul#main-menu {
     @include menu-reset;
-    max-height: 0px;
+    display: none;
     overflow: hidden;
 
     html.lt-ie9 & {
@@ -122,9 +113,6 @@ $menu-text: #fff;
     }
   }
 
-  input[type="checkbox"]:checked ~ ul#main-menu {
-    max-height: 9999px;
-  }
 }
 
 #front-menu {

@@ -800,7 +800,7 @@ optgroup::-moz-focus-inner {
   position: relative;
   width: 100%;
 }
-#main-menu-container label {
+#main-menu-container a#main-menu-toggle {
   text-align: center;
   display: block;
   height: 1em;
@@ -813,19 +813,13 @@ optgroup::-moz-focus-inner {
   left: 0;
   padding: .25em .75em;
   cursor: pointer;
+  text-decoration: none;
+  font-weight: normal;
 }
-#main-menu-container label:hover {
+#main-menu-container a#main-menu-toggle:hover {
   background: #555555;
 }
 html.lt-ie9 #main-menu-container input {
-  display: none;
-}
-#main-menu-container input[type="checkbox"] {
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: 0;
   display: none;
 }
 #main-menu-container h2 {
@@ -840,7 +834,7 @@ html.lt-ie9 #main-menu-container input {
   padding: 0;
   list-style: none;
   border-bottom: 1px solid #333333;
-  max-height: 0px;
+  display: none;
   overflow: hidden;
 }
 html.lt-ie9 #main-menu-container ul#main-menu.active {
@@ -862,9 +856,6 @@ html.lt-ie9 #main-menu-container ul#main-menu.active {
 }
 #main-menu-container ul#main-menu li a:hover {
   background: #555555;
-}
-#main-menu-container input[type="checkbox"]:checked ~ ul#main-menu {
-  max-height: 9999px;
 }
 
 #front-menu h2 {
