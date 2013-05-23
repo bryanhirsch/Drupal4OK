@@ -13,8 +13,7 @@ $menu-text: #fff;
 }
 
 .region-pre-menu {
-  padding: $base-half-leader $base-leader $base-half-leader;
-  text-align: right;
+  padding: $base-half-leader $base-leader  $base-half-leader 3em;
 
   p {
     margin: 0;
@@ -28,6 +27,12 @@ $menu-text: #fff;
 
   #block-system-user-menu ul{
     @include horizontal-list();
+    li {
+      margin: 0 $base-leader;
+    }
+    li.last {
+      float: right;
+    }
     a {
       color: $white;
       &:active, &:visited, &:hover {
@@ -57,7 +62,7 @@ $menu-text: #fff;
     color: #ccc;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     padding: .25em .75em;
     cursor: pointer;
 
@@ -80,6 +85,7 @@ $menu-text: #fff;
     height: 1px;
     padding: 0;
     margin: 0;
+    display: none;
   }
 
   h2 {
@@ -97,8 +103,6 @@ $menu-text: #fff;
     html.lt-ie9 & {
       &.active {
         max-height: 9999px;
-        padding-bottom: $base-rhythm-unit;
-        border-top: 1px solid $menu-divider;
       }
     }
 
@@ -120,8 +124,6 @@ $menu-text: #fff;
 
   input[type="checkbox"]:checked ~ ul#main-menu {
     max-height: 9999px;
-    padding-bottom: $base-rhythm-unit;
-    border-top: 1px solid $menu-divider;
   }
 }
 
