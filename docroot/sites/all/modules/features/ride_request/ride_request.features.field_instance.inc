@@ -38,7 +38,7 @@ function ride_request_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_person_contact_pref',
     'label' => 'I prefer to be contacted by',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -47,7 +47,7 @@ function ride_request_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 5,
     ),
   );
 
@@ -127,7 +127,7 @@ function ride_request_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 

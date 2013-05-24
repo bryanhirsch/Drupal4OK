@@ -1,7 +1,7 @@
 name = Disaster Response Auto Node Titles
 description = Auto Node Titles
 core = 7.x
-package = Disaster Response
+package = Features
 version = 7.x-1.0
 project = disaster_response_auto_node_titles
 dependencies[] = ctools

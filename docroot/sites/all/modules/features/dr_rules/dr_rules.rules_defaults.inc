@@ -20,35 +20,11 @@ function dr_rules_default_rules_configuration() {
             "roles" : { "value" : { "1" : "1" } }
           }
         },
-        { "AND" : [
-            { "text_matches" : {
-                "text" : [ "site:current-page:path" ],
-                "match" : "node\\/add",
-                "operation" : "starts"
-              }
-            },
-            { "OR" : [] },
-            { "text_matches" : {
-                "text" : [ "site:current-page:path" ],
-                "match" : "housing-request\\/",
-                "operation" : "starts"
-              }
-            },
-            { "OR" : [] },
-            { "text_matches" : {
-                "text" : [ "site:current-page:path" ],
-                "match" : "housing-available\\/",
-                "operation" : "starts"
-              }
-            },
-            { "OR" : [] },
-            { "text_matches" : {
-                "text" : [ "site:current-page:path" ],
-                "match" : "ride-request\\/",
-                "operation" : "starts"
-              }
-            }
-          ]
+        { "text_matches" : {
+            "text" : [ "site:current-page:path" ],
+            "match" : "node\\/add",
+            "operation" : "starts"
+          }
         }
       ],
       "DO" : [

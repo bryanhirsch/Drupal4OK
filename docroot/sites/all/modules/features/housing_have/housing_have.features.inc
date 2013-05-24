@@ -37,7 +37,7 @@ function housing_have_node_info() {
       'has_title' => '1',
       'title_label' => t('Summary'),
       'help' => t('<p><strong>Privacy Statement</strong><br />
-The information collected on this form is used by help4ok.org to allow us to match someone who has housing available with someone who requires housing. The information collected on this form is displayed on the website. You can update or remove this information at any time by returning to this website. Your information will not be used for any other purpose other than that noted above.</p>'),
+The information collected on this form is used by help4ok.net to allow us to match someone who has housing available with someone who requires housing. The information collected on this form is displayed on the website. You can update or remove this information at any time by returning to this website. Your information will not be used for any other purpose other than that noted above.</p>'),
     ),
     'housing_need' => array(
       'name' => t('a Request to Stay'),
