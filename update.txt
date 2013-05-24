@@ -1,0 +1,12 @@
+** thursAfternoonHeddn-rebase  **
+
+Deploy new tag
+Clear cache
+Revert features
+Enable conditional fields
+Enable disaster_response_auto_node_titles feature
+Configure conditional fields for communication preference
+  field_person_email => email
+  field_person_phone_number => voice, text
+Update ride_request auto node title to not display title.
+
