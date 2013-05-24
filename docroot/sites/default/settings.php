@@ -210,6 +210,13 @@
  *   );
  * @endcode
  */
+$databases['default']['default'] = array(
+  'driver' => 'mysql',
+  'database' => 'd4ok',
+  'username' => 'root',
+  'password' => 'taz4mnbe',
+  'host' => 'localhost',
+);
 
 if (file_exists('/var/www/site-php')) {
   require('/var/www/site-php/drupal4ok/housing_branch-settings.inc');
@@ -217,16 +224,6 @@ if (file_exists('/var/www/site-php')) {
   $conf['lock_inc'] = './sites/all/modules/memcache/memcache-lock.inc';
   $conf['cache_default_class'] = 'MemCacheDrupal';
   $conf['cache_class_form'] = 'DrupalDatabaseCache';
-}
-else {
-  // For local development.
-  $databases['default']['default'] = array(
-    'driver' => 'mysql',
-    'database' => 'drupal4ok',
-    'username' => 'root',
-    'password' => 'root',
-    'host' => 'localhost',
-  );
 }
 
 /**

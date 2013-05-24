@@ -47,8 +47,17 @@ td {
   line-height: 1.1em;
 }
 
-#name-and-slogan {
+#site-name {
   display: none;
+}
+
+#logo img {
+  width: 100%;
+  max-width: 560px;
+}
+
+#site-slogan {
+  text-align: center;
 }
 
 #logo img {
