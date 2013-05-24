@@ -739,8 +739,7 @@ optgroup::-moz-focus-inner {
 }
 
 .region-pre-menu {
-  padding: 0.25em 0.5em 0.25em;
-  text-align: right;
+  padding: 0.25em 0.5em 0.25em 3em;
 }
 .region-pre-menu p {
   margin: 0;
@@ -749,6 +748,44 @@ optgroup::-moz-focus-inner {
   color: white;
   text-decoration: none;
   margin-left: 0.5em;
+}
+.region-pre-menu #block-system-user-menu ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.region-pre-menu #block-system-user-menu ul li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.region-pre-menu #block-system-user-menu ul li:first-child, .region-pre-menu #block-system-user-menu ul li.first {
+  padding-left: 0;
+}
+.region-pre-menu #block-system-user-menu ul li:last-child {
+  padding-right: 0;
+}
+.region-pre-menu #block-system-user-menu ul li.last {
+  padding-right: 0;
+}
+.region-pre-menu #block-system-user-menu ul li {
+  margin: 0 0.5em;
+}
+.region-pre-menu #block-system-user-menu ul li.last {
+  float: right;
+}
+.region-pre-menu #block-system-user-menu ul a {
+  color: white;
+}
+.region-pre-menu #block-system-user-menu ul a:active, .region-pre-menu #block-system-user-menu ul a:visited, .region-pre-menu #block-system-user-menu ul a:hover {
+  color: white;
 }
 
 #main-menu-container {
@@ -766,15 +803,15 @@ optgroup::-moz-focus-inner {
 #main-menu-container label {
   text-align: center;
   display: block;
-  width: 100%;
   height: 1em;
   line-height: 1em;
   font-size: 1.5em;
   background: #333333;
   color: #ccc;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
+  padding: .25em .75em;
   cursor: pointer;
 }
 #main-menu-container label:hover {
@@ -789,13 +826,14 @@ html.lt-ie9 #main-menu-container input {
   height: 1px;
   padding: 0;
   margin: 0;
+  display: none;
 }
 #main-menu-container h2 {
   display: none;
   padding: 0;
   margin: 0;
 }
-#main-menu-container ul {
+#main-menu-container ul#main-menu {
   display: block;
   width: 100%;
   margin: 0;
@@ -805,12 +843,10 @@ html.lt-ie9 #main-menu-container input {
   max-height: 0px;
   overflow: hidden;
 }
-html.lt-ie9 #main-menu-container ul.active {
+html.lt-ie9 #main-menu-container ul#main-menu.active {
   max-height: 9999px;
-  padding-bottom: 1.5em;
-  border-top: 1px solid #333333;
 }
-#main-menu-container ul li {
+#main-menu-container ul#main-menu li {
   display: block;
   width: 100%;
   margin: 0;
@@ -818,19 +854,17 @@ html.lt-ie9 #main-menu-container ul.active {
   list-style: none;
   border-bottom: 1px solid #333333;
 }
-#main-menu-container ul li a {
+#main-menu-container ul#main-menu li a {
   display: block;
   color: white;
   padding: 0.5em;
   text-decoration: none;
 }
-#main-menu-container ul li a:hover {
+#main-menu-container ul#main-menu li a:hover {
   background: #555555;
 }
-#main-menu-container input[type="checkbox"]:checked ~ ul {
+#main-menu-container input[type="checkbox"]:checked ~ ul#main-menu {
   max-height: 9999px;
-  padding-bottom: 1.5em;
-  border-top: 1px solid #333333;
 }
 
 #front-menu h2 {
@@ -1333,8 +1367,12 @@ td {
   line-height: 1.1em;
 }
 
-#name-and-slogan {
+#site-name {
   display: none;
+}
+
+#site-slogan {
+  text-align: center;
 }
 
 #logo img {
