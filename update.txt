@@ -1,12 +1,24 @@
-** thursAfternoonHeddn-rebase  **
+Update 7.x-1.10 -> 7.x-1.11
+============================
 
-Deploy new tag
+Deploy 7.x-1.11
+
 Clear cache
+  drush @drupal4ok.prod -l help4ok.org cc all
+
 Revert features
+  drush @drupal4ok.prod -l help4ok.org fra -y
+
 Enable conditional fields
+  drush @drupal4ok.prod -l help4ok.org en conditional_fields -y
+
 Enable disaster_response_auto_node_titles feature
+  drush @drupal4ok.prod -l help4ok.org en disaster_response_auto_node_titles -y
+
+Update ride_request auto node title to not display title.
+
 Configure conditional fields for communication preference
   field_person_email => email
   field_person_phone_number => voice, text
-Update ride_request auto node title to not display title.
+
 
