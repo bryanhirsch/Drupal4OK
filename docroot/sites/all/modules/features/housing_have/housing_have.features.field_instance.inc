@@ -511,7 +511,7 @@ function housing_have_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_person_contact_pref',
     'label' => 'I prefer to be contacted by',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -779,10 +779,12 @@ function housing_have_field_default_field_instances() {
       'active' => 1,
       'module' => 'addressfield',
       'settings' => array(
-        'available_countries' => array(),
+        'available_countries' => array(
+          'US' => 'US',
+        ),
         'format_handlers' => array(
           'address' => 'address',
-          'address-hide-country' => 0,
+          'address-hide-country' => 'address-hide-country',
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
@@ -817,7 +819,7 @@ function housing_have_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_person_contact_pref',
     'label' => 'I prefer to be contacted by',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
     ),

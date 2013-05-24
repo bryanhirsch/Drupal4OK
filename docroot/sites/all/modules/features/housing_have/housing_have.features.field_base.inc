@@ -136,6 +136,7 @@ function housing_have_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_housing_location',
+    'field_permissions' => array(),
     'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
