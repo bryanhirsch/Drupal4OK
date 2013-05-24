@@ -11,11 +11,11 @@ function housing_have_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'have_bed';
+  $view->name = 'housing_available';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Have Bed';
+  $view->human_name = 'Housing - Available';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -57,7 +57,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h3>If you need housing, you are in the right place. If you don\'t see a match, post a request <a href="/node/add/housing-need">here.</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3>If you need housing, you are in the right place. If you don\'t see a match, post a request for housing <a href="/node/add/housing-need">here.</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary */
   $handler->display->display_options['header']['result']['id'] = 'result';
@@ -72,7 +72,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
   $handler->display->display_options['footer']['area']['empty'] = TRUE;
-  $handler->display->display_options['footer']['area']['content'] = '<h3>If you don\'t see a match, post a request <a href="/node/add/housing-need">here.</a></h3>';
+  $handler->display->display_options['footer']['area']['content'] = '<h3>If you don\'t see a match, post a request for housing  <a href="/node/add/housing-need">here.</a></h3>';
   $handler->display->display_options['footer']['area']['format'] = 'filtered_html';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -133,17 +133,17 @@ function housing_have_views_default_views() {
     3 => 0,
   );
 
-  /* Display: Have Bed */
-  $handler = $view->new_display('page', 'Have Bed', 'page');
+  /* Display: Housing Available */
+  $handler = $view->new_display('page', 'Housing Available', 'page');
   $handler->display->display_options['path'] = 'housing/have';
-  $export['have_bed'] = $view;
+  $export['housing_available'] = $view;
 
   $view = new view();
-  $view->name = 'need_bed';
+  $view->name = 'housing_required';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Need Bed';
+  $view->human_name = 'Housing - Required';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -185,7 +185,7 @@ function housing_have_views_default_views() {
   $handler->display->display_options['header']['area']['table'] = 'views';
   $handler->display->display_options['header']['area']['field'] = 'area';
   $handler->display->display_options['header']['area']['empty'] = TRUE;
-  $handler->display->display_options['header']['area']['content'] = '<h3>If you can host people, you are in the right place. If you don\'t see a match, post an offer <a href="/node/add/housing-have">here.</a></h3>';
+  $handler->display->display_options['header']['area']['content'] = '<h3>If you can host people, you are in the right place. If you can\'t offer housing to anyone from the list below please post an offer <a href="/node/add/housing-have">here.</a></h3>';
   $handler->display->display_options['header']['area']['format'] = 'full_html';
   /* Header: Global: Result summary */
   $handler->display->display_options['header']['result']['id'] = 'result';
@@ -263,7 +263,7 @@ function housing_have_views_default_views() {
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['path'] = 'housing/need';
-  $export['need_bed'] = $view;
+  $export['housing_required'] = $view;
 
   return $export;
 }
