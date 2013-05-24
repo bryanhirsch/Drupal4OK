@@ -8,5 +8,6 @@ project = dr_rules
 dependencies[] = entity
 dependencies[] = rules
 features[features_api][] = api:2
-features[rules_config][] = rules_add_content_redirect_to_login
+features[rules_config][] = rules_add_content_redirect_to_login_bundles
+features[rules_config][] = rules_add_content_redirect_to_login_node_add
 project path = sites/all/modules/features
