@@ -1,3 +1,22 @@
+Update 7.x-7.11 -> 7.x-1.12 -> 7.x-1.13.
+==========================================
+
+1. Deploy 7.x-1.12. 
+
+2. Enable default configuration module and save all config to database.
+
+  drush en default_configuration -y 
+  drush cbsa default_configuration
+
+3. Disable depricated feature modules.
+
+  drush dis dr_rules -y
+
+4. Deploy 7.x-1.13 (removes deprecated feature modules).
+
+
+
+
 Update 7.x-1.10 -> 7.x-1.11
 ============================
 

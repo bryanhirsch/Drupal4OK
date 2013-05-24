@@ -141,8 +141,8 @@ function default_configuration_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "drupal_message" : { "message" : "In order to post on the site, please create an account or login." } },
-        { "redirect" : { "url" : "user\\/login", "destination" : 1 } }
+        { "drupal_message" : { "message" : "To view people\\u0027s contact info you have to log in. Use your Google, Facebook, or Twitter account, or create an account below. If you already have a user account, you you can \\u003Ca href=\\u0022\\/user\\/login\\u0022\\u003Elogin here.\\u003C\\/a\\u003E." } },
+        { "redirect" : { "url" : "user\\/register", "destination" : 1 } }
       ]
     }
   }');
@@ -165,8 +165,8 @@ function default_configuration_default_rules_configuration() {
         }
       ],
       "DO" : [
-        { "drupal_message" : { "message" : "In order to post on the site, please create an account or login." } },
-        { "redirect" : { "url" : "user\\/login", "destination" : 1 } }
+        { "drupal_message" : { "message" : "Post a request for a ride you have to log in. Use your Google, Facebook, or Twitter account, or create an account below. If you already have a user account, you you can \\u003Ca href=\\u0022\\/user\\/login\\u0022\\u003Elogin here.\\u003C\\/a\\u003E." } },
+        { "redirect" : { "url" : "user\\/register", "destination" : 1 } }
       ]
     }
   }');
