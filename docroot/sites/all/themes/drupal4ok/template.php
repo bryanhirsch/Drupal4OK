@@ -116,7 +116,7 @@ function drupal4ok_theme($existing, $type, $theme, $path)
 function drupal4ok_node_preview($variables) {
   $node = $variables['node'];
   $output = '<div class="preview">';
-  if ($node->type == 'housing_need') {
+  if (in_array($node->type, array('housing_need'))) {
     $elements = node_view($node, 'full');
     $full = drupal_render($elements);
     $output .= '<h3 class="post-preview" >' . t('Preview of your posting') . '</h3>';
