@@ -10,6 +10,7 @@ dependencies[] = admin_menu
 dependencies[] = advanced_help
 dependencies[] = auto_nodetitle
 dependencies[] = browscap
+dependencies[] = conditional_fields
 dependencies[] = ctools
 dependencies[] = date
 dependencies[] = email
