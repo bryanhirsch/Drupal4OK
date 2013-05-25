@@ -25,6 +25,7 @@ dependencies[] = geophp
 dependencies[] = globalredirect
 dependencies[] = googleanalytics
 dependencies[] = housing_have
+dependencies[] = hybridauth
 dependencies[] = jquery_update
 dependencies[] = leaflet
 dependencies[] = libraries
@@ -42,7 +43,11 @@ dependencies[] = views
 dependencies[] = webform
 dependencies[] = wysiwyg
 
-; feature
-; -------
+; features 
+; ---------
 dependencies[] = person
 dependencies[] = ride_request
+
+; ctools export
+; ----------------
+dependencies[] = default_configuration
