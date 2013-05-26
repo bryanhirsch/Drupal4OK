@@ -142,3 +142,9 @@ function drupal4ok_node_preview($variables) {
   $output .= "</div>\n";
   return $output;
 }
+
+function drupal4ok_form_ride_request_node_form_alter(&$form, &$form_state, $form_id) {
+  if (!user_access('administer content')) {
+    $form['field_ride_driver_assigned']['#type'] = 'hidden';
+  }
+}
