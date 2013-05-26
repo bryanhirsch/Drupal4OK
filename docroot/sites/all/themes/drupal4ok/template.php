@@ -144,7 +144,11 @@ function drupal4ok_node_preview($variables) {
 }
 
 function drupal4ok_form_ride_request_node_form_alter(&$form, &$form_state, $form_id) {
+  # Hide rider field from non-admin users.
   if (!user_access('administer content')) {
     $form['field_ride_driver_assigned']['#type'] = 'hidden';
   }
+  # Hide and do not require title input, since it isn't used
+    $form['title']['#required'] = FALSE;
+    $form['title']['#type'] = 'hidden';
 }
