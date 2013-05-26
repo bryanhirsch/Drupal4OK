@@ -34,7 +34,8 @@ Drupal 4 Oklahoma // #Drupal4OK
 
 ### News, pics, videos, etc.
 
-  - [Help4ok.org now being promoted by FEMA](https://www.evernote.com/shard/s31/sh/b8cfed11-81f3-41ad-a372-40d2dea136e2/678f977badff5529254d6925f69f1a4e)
+  - Help4ok.org now being promoted by FEMA ([desktop](https://www.evernote.com/shard/s31/sh/b8cfed11-81f3-41ad-a372-40d2dea136e2/678f977badff5529254d6925f69f1a4e),
+    [mobile](https://www.evernote.com/shard/s31/sh/783cb792-a5dc-4eef-a2c5-4a357b35ca57/dd0aefacac3e819863edc18884bfec3a))
   - NBC Portland, KGW coverage of Drupacon sprint: http://www.kgw.com/video/featured-videos/Portland-developers-set-up-site-to-help-OK-tornado-victims-208757851.html
   - Portland Business Journal, http://www.bizjournals.com/portland/blog/2013/05/drupal.html
   - [Stan Ascher's](http://www.youtube.com/user/StanAscher?feature=watch) video from the #Drupal4OK code sprint ad Drupalcon Portland: http://youtu.be/oeqo5PrO3OM
