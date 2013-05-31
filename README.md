@@ -14,9 +14,9 @@ On May 20, 2013, a tornado devastated Moore, Oklahoma. The next day volunteers a
 
 Right now there are two parallel works in progress on this project:
 
-#1 Help - Using help4ok.org as a proof-of-concept, incorporating feedback we've received from users and disaster response experts, we're working to make a Drupal distributionthat makes it fast and easy to set up and extend sites like help4ok.org.
+ #1 Help - Using help4ok.org as a proof-of-concept, incorporating feedback we've received from users and disaster response experts, we're working to make a Drupal distributionthat makes it fast and easy to set up and extend sites like help4ok.org.
 
-#2 www.help4ok.org - This website is still actively in use supporting survivors and volunteers in the aftermath of the tornado in Moore, OK.
+ #2 www.help4ok.org - This website is still actively in use supporting survivors and volunteers in the aftermath of the tornado in Moore, OK.
 
 <h3>Contribute to Help</h3>
 
