@@ -81,3 +81,9 @@ Twitter
     <li>http://opokrelief.net/more-organizations/</li>
     <li>http://interoccupy.net/blog/some-easy-ways-you-can-help-oklahoma-tornado-survivors/</li>
   </ul>
+    <ul>
+    <li>Massachusetts State Senator Jamie Eldridge Visits RHoK Boston: http://vimeo.com/67484792</li>
+    <li>https://twitter.com/CodeForBoston/status/340841685309325312/photo/1</li>
+    <li>https://twitter.com/tmgstudio/status/340852057013620736/photo/1</li>
+    <li>https://twitter.com/CodeForBoston/status/341297682062663680/photo/1</li>
+  </ul>
