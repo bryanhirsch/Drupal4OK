@@ -14,7 +14,8 @@ Update 7.x-7.11 -> 7.x-1.12 -> 7.x-1.13.
 
 4. Deploy 7.x-1.13 (removes deprecated feature modules).
 
-
+5. Move the "User login - HybridAuth widget only" block to the Header region
+   Set block title to <none>
 
 
 Update 7.x-1.10 -> 7.x-1.11
