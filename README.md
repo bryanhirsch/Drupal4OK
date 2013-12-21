@@ -1,6 +1,8 @@
 Drupal 4 Oklahoma // #Drupal4OK
 ================================
 
+This is deprecated and being kept online for personal use. Please do not use.
+
 ### Website
 [help4ok.org](http://help4ok.org)
 
